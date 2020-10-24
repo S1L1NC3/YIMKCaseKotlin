@@ -1,6 +1,7 @@
 package com.dmd.yimkcasekotlin.models
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class Emoji (
 
@@ -11,4 +12,4 @@ data class Emoji (
 	@SerializedName("crying") val crying : Double,
 	@SerializedName("angry") val angry : Double,
 	@SerializedName("suprised") val suprised : Double
-)
+) : Serializable

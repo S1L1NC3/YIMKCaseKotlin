@@ -1,6 +1,7 @@
 package com.dmd.yimkcasekotlin.models
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class News (
 
@@ -19,4 +20,4 @@ data class News (
 	@SerializedName("body") val body : List<Body>,
 	@SerializedName("related") val related : List<Any>,
 	@SerializedName("emoji") val emoji : Emoji
-)
+) : Serializable
