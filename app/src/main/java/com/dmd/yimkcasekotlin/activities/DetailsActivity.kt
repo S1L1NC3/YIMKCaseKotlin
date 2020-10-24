@@ -4,7 +4,6 @@ import android.graphics.Color
 import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
@@ -19,12 +18,11 @@ class DetailsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_details)
 
-        val newsExtra = intent.getSerializableExtra("objectToDetails")
-        Log.i("TAGTAGTAG", "onCreate: ${newsExtra}")
+        val newsExtra = intent.getSerializableExtra(R.string.detailsExtrasKey.toString())
         arrangeDatas(newsExtra as News)
     }
 
-    fun arrangeDatas(news: News){
+    private fun arrangeDatas(news: News){
         txtNewsDetailHeader.text = news.title
         txtNewsDetailDescription.text = news.spot
 
@@ -36,14 +34,14 @@ class DetailsActivity : AppCompatActivity() {
     fun playPauseMethod(view: View){
         if (videoViewDetails.isPlaying){
             videoViewDetails.pause()
-            toggleVisibility(view)
+            toggleVisibility()
         } else {
             videoViewDetails.start()
-            toggleVisibility(view)
+            toggleVisibility()
         }
     }
 
-    private fun toggleVisibility(view: View){
+    private fun toggleVisibility() {
         val unwrappedDrawable: Drawable? = AppCompatResources.getDrawable(applicationContext, R.drawable.pause)
 
         val wrappedDrawable = DrawableCompat.wrap(unwrappedDrawable!!)

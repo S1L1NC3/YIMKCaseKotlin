@@ -2,7 +2,7 @@ package com.dmd.yimkcasekotlin.viewModels
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.dmd.yimkcasekotlin.Services.Service
+import com.dmd.yimkcasekotlin.api.Service
 import com.dmd.yimkcasekotlin.models.News
 import com.dmd.yimkcasekotlin.models.ServiceResponse
 import io.reactivex.android.schedulers.AndroidSchedulers

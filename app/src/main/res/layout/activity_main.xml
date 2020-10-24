@@ -27,12 +27,11 @@
             android:id="@+id/dataError"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Error! Try Again"
+            android:text="@string/error_try_again"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-        </TextView>
+            app:layout_constraintTop_toTopOf="parent"></TextView>
 
         <ProgressBar
             android:id="@+id/dataLoading"

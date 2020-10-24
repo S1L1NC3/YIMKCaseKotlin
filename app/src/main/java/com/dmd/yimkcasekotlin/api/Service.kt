@@ -1,4 +1,4 @@
-package com.dmd.yimkcasekotlin.Services
+package com.dmd.yimkcasekotlin.api
 
 import com.dmd.yimkcasekotlin.models.ServiceResponse
 import io.reactivex.Single
@@ -17,6 +17,10 @@ class Service {
         .create(API::class.java)
 
     fun getData() : Single<ServiceResponse> {
-        return api.getBaseData()
+        return api.getBaseData(category = "manset",
+            count = 35,
+            offset = 0,
+            deviceType = 1,
+            userId = "61ed99e0c09a8664")
     }
 }

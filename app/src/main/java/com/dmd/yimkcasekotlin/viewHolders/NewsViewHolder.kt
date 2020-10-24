@@ -24,11 +24,11 @@ class NewsViewHolder(inflater: LayoutInflater, parent: ViewGroup) :
 
     fun bind(news: News) {
         mTitleView?.text = news.title
-        Picasso.get().load(news.imageUrl).into(mImageView);
+        Picasso.get().load(news.imageUrl).into(mImageView)
 
         itemView.setOnClickListener {
             val detailsIntent = Intent(itemView.context, DetailsActivity::class.java)
-            detailsIntent.putExtra("objectToDetails",news)
+            detailsIntent.putExtra(R.string.detailsExtrasKey.toString(),news)
             itemView.context.startActivity(detailsIntent)
 
         }
